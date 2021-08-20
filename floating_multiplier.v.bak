@@ -1,0 +1,45 @@
+module floating_multiplier(num1,num2,product);
+
+input [31:0] num1,num2;
+output [31:0] product;
+
+wire [7:0] num1_exponent,num2_exponent,exponent,product_exponent ;
+wire [22:0] num1_mantissa,num2_mantissa,product_mantissa ;
+wire num1_sign,num2_sign,product_sign ;
+
+wire [47:0] product,product_normalised ;
+
+
+assign num1_exponent = num1[30:23];
+assign num1_mantissa = num1[22:0];
+assign num1_sign = num1[31];
+
+assign num2_exponent = num1[30:23];
+assign num2_mantissa = num1[22:0];
+assign num2_sign = num1[31];
+
+assign product_sign = num1_sign ^ num1_sign;
+
+assign exponent = num1_exponent + num2_exponent;
+assign product_exponent = exponent - 8'd127  
+ 
+
+assign num1*num2;
+
+
+
+
+
+
+
+
+
+endmodule
+
+
+
+
+
+
+
+
